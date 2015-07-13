@@ -24,6 +24,7 @@ Rails : Rails 4.2.1
 
 Gems Used :
 rename - to rename the name of the application
+bcrypt3.1.7 - for the secure password
 
 Database Models
 User Guide

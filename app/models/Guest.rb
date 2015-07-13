@@ -12,4 +12,5 @@
 #
 
 class Guest < ActiveRecord::Base
+  belongs_to_many :events
 end
