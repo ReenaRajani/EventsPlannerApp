@@ -1,28 +1,32 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Contents : 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Introduction and Background
+Versions
+Database Models
+User Guide
+Testing 
+Related Resources
+Deployment instructions
+How to Run the Test Suite 
+Future Considerations
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Introduction and Background
+PlanEasy is a web application that aids in planning an event, managing guest list, sending invites and getting the RSVP status of the guests in addition to providing a personalized todo's list. 
+
+
+Software Versions
+Ruby : ruby 2.2.2p95
+Rails : Rails 4.2.1
+
+
+Database Models
+User Guide
+Testing 
+Related Resources
+Deployment instructions
+How to Run the Test Suite 
+
+Future Considerations
