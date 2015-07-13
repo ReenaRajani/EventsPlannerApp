@@ -6,7 +6,7 @@
 #  name        :string
 #  email_id    :text
 #  phone_no    :string
-#  rsvp_status :string
+#  rsvp_status :integer
 #  created_at  :datetime
 #  updated_at  :datetime
 #
