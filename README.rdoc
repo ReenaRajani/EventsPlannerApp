@@ -3,7 +3,8 @@
 Contents : 
 
 Introduction and Background
-Versions
+Software versions
+Gems Used
 Database Models
 User Guide
 Testing 
@@ -21,11 +22,14 @@ Software Versions
 Ruby : ruby 2.2.2p95
 Rails : Rails 4.2.1
 
+Gems Used :
+rename - to rename the name of the application
 
 Database Models
 User Guide
 Testing 
 Related Resources
+rename - http://www.adamscott.io/blog/2014/01/21/renaming-a-ruby-on-rails-application/
 Deployment instructions
 How to Run the Test Suite 
 
