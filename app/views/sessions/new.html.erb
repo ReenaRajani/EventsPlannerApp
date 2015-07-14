@@ -2,11 +2,11 @@
 <h1>Log in </h1>
 
 <div class="row">
-    <div class="col-md-4 col-md-offset-5">
+  <div class="col-md-4 col-md-offset-5">
 
       <%= form_for(:session, url: login_path , class: "form-signin form-horizontal") do |f| %>
       
-      <h2 class="form-signin-heading">Log in</h2>
+        <h2 class="form-signin-heading">Log in</h2>
         
         <div class="form-group">
           <%= f.label :email_id , class: "sr-only" %>
@@ -17,12 +17,20 @@
           <%= f.label :password  , class: "sr-only" %>
           <%= f.password_field :password , class: 'form-control' , placeholder: "Password" , required: "" %>
         </div>
-          <div class="col-md-5 col-md-offset-3">
+
+        <div>
+          <%= f.label :remember_me, class: "checkbox inline" do %>
+          <%= f.check_box :remember_me %>
+          <span>Remember me on this computer</span>
+          <% end  %>
+        </div>
+
+        <div class="col-md-5 col-md-offset-3">
           <%= f.submit "Login", class: "btn btn-lg btn-primary " %>
         </div>
-      <% end %>
+      <% end %>      
 
        <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
 
-    </div>
+  </div>
 </div>
