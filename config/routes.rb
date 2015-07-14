@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'signup' => 'users#new'
+
   root :to => 'pages#home'
   resources :events do
     resources :guests do

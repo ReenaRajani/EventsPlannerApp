@@ -26,6 +26,7 @@ RSpec.describe User, :type => :model  do
       expect(user.email_id.downcase).to match(/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i)
     end
     it 'has an invalid email id ' do
+      
     end
 
   end
