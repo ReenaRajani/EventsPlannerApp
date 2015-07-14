@@ -31,6 +31,8 @@ User Guide
 Testing 
 Related Resources
 rename - http://www.adamscott.io/blog/2014/01/21/renaming-a-ruby-on-rails-application/
+testing - http://www.webascender.com/Blog/ID/566/Testing-Rails-4-Apps-With-RSpec-3-Part-I#.VaN8NM4kPdt
+
 Deployment instructions
 How to Run the Test Suite 
 
