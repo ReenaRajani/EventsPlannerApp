@@ -9,13 +9,16 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
   end
+  
   def index
     @users = User.all
   end
+  
   def create
     @user = User.new(user_params)
     if @user.save
       #handle a successful save
+      session[:user_id] = @user.id
       flash[:success] = "Your Login was successful! Welcome"
       redirect_to @user
 
@@ -23,9 +26,11 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+ 
   def edit
     @user = @current_user
   end
+  
   def update
     user = @current_user
     if user.update(user_params)
@@ -39,6 +44,7 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email_id, :phone_no, :password, :password_confirmation)
   end
+  
   def check_if_admin
     redirect_to root_path unless @current_user.present? && @current_user.admin?
   end

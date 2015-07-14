@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'faker'
+gem 'bootstrap-sass', '~> 3.3.4'
 
 gem 'rename'
 group :development, :test do
