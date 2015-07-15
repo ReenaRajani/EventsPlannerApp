@@ -16,4 +16,9 @@
 class Event < ActiveRecord::Base
   has_and_belongs_to_many :users
   has_many :guests
+
+  validates :eventName, :eventdate, :eventtime, :address, :invitation,  presence: true
+
+  validates_associated :users
+
 end
