@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if user.present? && user.authenticate(params[:session][:password])
       session[:user_id] = user.id #logs in the give user 
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      redirect_to user # redirected to the main page 
+      redirect_back_or user # redirected to user page
 
     else
       flash[:danger] = 'Invalid email/password combination'

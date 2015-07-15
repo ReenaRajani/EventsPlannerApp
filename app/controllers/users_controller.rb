@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   
-  before_action :check_if_admin, :only => [:index]
+  before_action :check_if_admin, :only => [:index ,:destroy]
+  before_action :logged_in_user, only: [:edit, :update]
 
   def new
     @user = User.new
@@ -11,7 +12,8 @@ class UsersController < ApplicationController
   end
   
   def index
-    @users = User.all
+    # @users = User.all
+    @users = User.paginate(page: params[:page])
   end
   
   def create
@@ -28,24 +30,43 @@ class UsersController < ApplicationController
   end
  
   def edit
-    @user = @current_user
+    @user = User.find params[:id]
   end
   
   def update
-    user = @current_user
-    if user.update(user_params)
-      redirect_to root_path
+    @user = User.find params[:id]
+    redirect_to(root_url) unless @user == current_user
+    if @user.update(user_params)
+      flash[:success] = "Profile updated"
+      redirect_to @user
     else
     render :edit
     end
   end
 
+  def destroy
+   user = User.find params[:id]
+      user.destroy
+    flash[:success] = "User deleted"
+    redirect_to users_url
+  end
   private
   def user_params
     params.require(:user).permit(:name, :email_id, :phone_no, :password, :password_confirmation)
   end
   
   def check_if_admin
-    redirect_to root_path unless @current_user.present? && @current_user.admin?
+     unless logged_in? && current_user.admin? 
+        redirect_to root_path 
+        # unless @user.admin
+      end
+  end
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = "Please Log in "
+      redirect_to login_path
+    end
   end
 end
