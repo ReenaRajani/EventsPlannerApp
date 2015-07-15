@@ -1,0 +1,62 @@
+// Place all the styles related to the Guests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.add_new_guest {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 8% 25px;
+  text-align: right;
+ }
+
+.button {
+  font-size: 20px;
+  font-family: sans-serif; 
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: #3C758C;
+  padding: 20px;
+  margin: 15px;
+  display: block;
+  border-radius: 2px;
+}
+
+.primary {
+  font-size: 16px;
+  margin: 0 8%;
+  width: 84%;
+  height: 50px;
+  background-color: lightgreen;
+  border: 0px;
+  border-radius: 2px;
+}
+
+select {
+  margin: 5px 8%;
+  width: 84%;
+  padding: 50px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: 2px lightgray solid;
+  background-color: #fff;
+  height: 50px;
+
+
+}
+
+label {
+  margin: 8%;
+  text-align: left;
+  font-size: 16px;
+}
+
+input[type="text"] {
+  height: 45px;
+  width: 70%;
+  font-size: 16px;
+}
+.stacked {
+  width: 100%;
+  margin: 2% 5%;
+}

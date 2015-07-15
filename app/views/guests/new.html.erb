@@ -1,0 +1,20 @@
+<% provide(:title, 'Guest List') %>
+<h1> Add to Your Guest List </h1>
+
+<%= form_tag(event_guests_path ,method: "POST") do %>
+<div class ="to_copy">
+  <%= label_tag("name[]", "name") %>
+  <%= label_tag("email_id[]", "email_id") %>
+  <%= label_tag("phone_no[]","phone_no") %>
+   <br>
+  <div class="stacked">
+    <%= text_field_tag("name[]") %>
+    <%= text_field_tag("email_id[]") %>
+    <%= text_field_tag("phone_no[]") %>
+  </div>
+
+  <p class="add_new_guest"> + </p>
+</div>
+<%= submit_tag("submit" , :class => 'primary') %>
+
+<% end  %>
