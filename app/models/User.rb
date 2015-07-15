@@ -10,6 +10,7 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  admin           :boolean          default(FALSE)
+#  remember_digest :string
 #
 
 class User < ActiveRecord::Base

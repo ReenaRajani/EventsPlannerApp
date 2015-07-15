@@ -1,7 +1,6 @@
 # == Route Map
 #
 #               Prefix Verb   URI Pattern               Controller#Action
-#         sessions_new GET    /sessions/new(.:format)   sessions#new
 #                 root GET    /                         pages#home
 #               signup GET    /signup(.:format)         users#new
 #                login GET    /login(.:format)          sessions#new
@@ -15,10 +14,17 @@
 #                      PATCH  /users/:id(.:format)      users#update
 #                      PUT    /users/:id(.:format)      users#update
 #                      DELETE /users/:id(.:format)      users#destroy
+#          event_index GET    /event(.:format)          event#index
+#                      POST   /event(.:format)          event#create
+#            new_event GET    /event/new(.:format)      event#new
+#           edit_event GET    /event/:id/edit(.:format) event#edit
+#                event GET    /event/:id(.:format)      event#show
+#                      PATCH  /event/:id(.:format)      event#update
+#                      PUT    /event/:id(.:format)      event#update
+#                      DELETE /event/:id(.:format)      event#destroy
 #
 
 Rails.application.routes.draw do
-  get 'sessions/new'
 
   root :to => 'pages#home'
   
@@ -28,6 +34,7 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'login' => 'sessions#destroy' , :as => 'destroy_user_session'
   resources :users
+  resources :events
 
   
   # resources :events do

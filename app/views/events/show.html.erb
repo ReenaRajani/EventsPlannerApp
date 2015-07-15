@@ -1,0 +1,26 @@
+<h1> Event details as follow </h1>
+<p>
+  Event is  <%= @event.eventName %>
+</p>
+
+<p>
+  Occassion of the event is   <%= @event.occasion %>
+</p>
+<p>
+  When  <%= @event.eventdate %>
+</p>
+
+<p>
+  Where <%= @event.address %>
+</p>
+
+<p>
+  At  <%= @event.eventtime %>
+</p>
+
+Invitation  
+<hr>
+<%= @event.invitation %>
+<hr>
+
+<%= link_to 'Back', events_path %>

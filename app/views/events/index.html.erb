@@ -1,0 +1,15 @@
+<h1>Events created by you </h1>
+<% provide(:title, 'Event List') %>
+<h1>Listing All Events</h1>
+
+<ul class="events">
+  <% @events.each do |event| %>
+    <li>
+      <%= link_to event.eventName, event %>
+      <%= link_to 'Show', event %></td>
+      <%= link_to 'Edit', edit_event_path(event) %></td>
+      <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </li>
+  <% end %>
+</ul>
+

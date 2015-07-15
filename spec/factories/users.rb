@@ -10,8 +10,8 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  admin           :boolean          default(FALSE)
+#  remember_digest :string
 #
-
 
 FactoryGirl.define do 
   factory :user do |f| # different users for different user names 
