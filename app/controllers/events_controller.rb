@@ -4,13 +4,15 @@ class EventsController < ApplicationController
   end
 
   def index
-    @events = Event.all
+    # @events = Event.all 
+    @events = current_user.events
   end
 
   def create
     @event = Event.new(event_params)
     if @event.save
       # save is successful
+      current_user.events << @event
       flash[:success] = "Event successfully created"
       redirect_to @event
     else
@@ -24,10 +26,10 @@ class EventsController < ApplicationController
   end
 
   def update
-
     @event = Event.find params[:id]
-    redirect_to(root_url) unless @user == current_user
-    if @event.update(event_params)
+    if current_user.nil? || current_user.events.find( params[:id] ).nil?
+      redirect_to(root_url)
+    elsif @event.update(event_params)
       flash[:success] ="Event successfully edited"
       redirect_to @event
     else
@@ -38,9 +40,15 @@ class EventsController < ApplicationController
 
   def destroy
     event = Event.find params[:id]
-    event.destroy
-    flash[:success] = "Event deleted successfully"
-    redirect_to events_path
+
+    if current_user.nil? || current_user.events.find( params[:id] ).nil?
+      # flash[:notice] = "Nope, not your thang!"
+      redirect_to(root_url)
+    else
+      event.destroy
+      flash[:success] = "Event deleted successfully"
+      redirect_to events_path
+    end
   end
 
   def show
@@ -49,7 +57,8 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:eventName, :occasion, :eventdate, :eventtime, :address, :invitation)
+    #raise params.inspect
+    params.require(:event).permit(:eventName, :occasion, :eventdate_time, :address, :invitation)
   end
 
 end

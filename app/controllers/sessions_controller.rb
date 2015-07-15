@@ -4,7 +4,8 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email_id: params[:session][:email_id].downcase)
     if user.present? && user.authenticate(params[:session][:password])
-      session[:user_id] = user.id #logs in the give user 
+      session[:user_id] = user.id #logs in the give user
+      @current_user = User.find( session[:user_id] )
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       redirect_back_or user # redirected to user page
 

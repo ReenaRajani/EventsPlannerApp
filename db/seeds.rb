@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.destroy_all
+Event.destroy_all
 
 User.create!(name:  "Example User",
              email_id: "example@railstutorial.org",
@@ -25,3 +26,4 @@ User.create!(name:  "Example User",
                password_confirmation: password,
                phone_no: phone_no)
 end
+ 
