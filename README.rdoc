@@ -26,6 +26,7 @@ Gems Used :
 rename - to rename the name of the application
 bcrypt3.1.7 - for the secure password
 mandrill-api - For the mailing system 
+bootstrap - for the design stuff
 
 Database Models :
 User
@@ -37,12 +38,18 @@ To use this, create an account at  https://planeasy.herokuapp.com/ and login
 The homepage is a dashboard where the users can create an event and can add guests and send invites to them 
 
 Testing :
+In progess
 
 Related Resources
 rename - http://www.adamscott.io/blog/2014/01/21/renaming-a-ruby-on-rails-application/
 testing - http://www.webascender.com/Blog/ID/566/Testing-Rails-4-Apps-With-RSpec-3-Part-I#.VaN8NM4kPdt
 
-Deployment instructions
-How to Run the Test Suite 
+How to Run the Test Suite :
+No test suite has been used
 
-Future Considerations
+Future Considerations :
+Design Updates
+Geolocation addition
+Todo tracker addition
+Personal invitation design
+
