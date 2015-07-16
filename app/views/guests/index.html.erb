@@ -1,4 +1,3 @@
-<h1>Guest List </h1>
 <% provide(:title, 'Guest List') %>
 <h1>Listing All Guests </h1>
 <!-- 
@@ -34,4 +33,6 @@
 <form class="send_invites">
 <input type="submit" class= "send_invite btn btn-primary" value="Send Invites" /> 
 </form>  
+
+<%= link_to 'Back', event_path(params[:event_id]) %>
              

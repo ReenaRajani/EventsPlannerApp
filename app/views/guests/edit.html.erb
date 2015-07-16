@@ -1,7 +1,5 @@
 <% provide(:title, 'Edit Guest') %>
 <h1>Edit Guest </h1> 
-
-<%= form_for([@event, @guest],url: event_guest_path) do |f| %>
 <% if @guest.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
@@ -13,22 +11,28 @@
         </ul>
       </div>
     <% end %>
-  
-    <p class="field">
-      <%= f.label :name %><br>
-      <%= f.text_field :name, :autofocus => true %>
-    </p>
-    <p class="field">
-      <%= f.label :email_id %>
-      <%= f.text_field :email_id%>
-    </p>
-    <p class="field">
-      <%= f.label :phone_no %><br>
-      <%= f.text_area :phone_no %>
-    </p>
-    <p class="actions">
-      <%= f.submit :class=>'btn btn-submit full-width' %>
-  <% end %>
+<div class="row">
+   <div class="col-md-5 col-md-offset-3">
+      <%= form_for([@event, @guest],url: event_guest_path, class: 'form-horizontal') do |f| %>
 
-<%= link_to 'Show', event_guest_path(@event, @guest) %> |
-<%= link_to 'Back', event_path %>
+        
+           <div class="form-group">
+            <%= f.label :name %><br>
+            <%= f.text_field :name, :autofocus => true , class: 'form-control'%>
+         </div>
+           <div class="form-group">
+            <%= f.label :email_id %>
+            <%= f.text_field :email_id , class: 'form-control'%>
+          </div>
+           <div class="form-group">
+            <%= f.label :phone_no %><br>
+            <%= f.text_area :phone_no , class: 'form-control'%>
+          </div>
+          <div class="col-md-4 col-md-offset-3">
+            <%= f.submit :class=>'btn btn-submit full-width' %>
+          </div>
+        <% end %>
+  </div>
+</div>
+<!-- 
+<%= link_to 'Back', event_guest_path(@event, @guest) %>  -->
