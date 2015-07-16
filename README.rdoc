@@ -25,10 +25,19 @@ Rails : Rails 4.2.1
 Gems Used :
 rename - to rename the name of the application
 bcrypt3.1.7 - for the secure password
+mandrill-api - For the mailing system 
 
-Database Models
-User Guide
-Testing 
+Database Models :
+User
+Guests
+Events
+
+User Guide :
+To use this, create an account at  https://planeasy.herokuapp.com/ and login
+The homepage is a dashboard where the users can create an event and can add guests and send invites to them 
+
+Testing :
+
 Related Resources
 rename - http://www.adamscott.io/blog/2014/01/21/renaming-a-ruby-on-rails-application/
 testing - http://www.webascender.com/Blog/ID/566/Testing-Rails-4-Apps-With-RSpec-3-Part-I#.VaN8NM4kPdt
