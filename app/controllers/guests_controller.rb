@@ -35,9 +35,11 @@ class GuestsController < ApplicationController
   def edit
     @event = Event.find( params[:event_id] )
     @guest = Guest.find params[:id]
+    # raise params.inspect
   end
 
   def update
+    @event = Event.find( params[:event_id] )
     @guest = Guest.find params[:id]
     if current_user.nil? || current_user.events.find( params[:event_id] ).nil?
       redirect_to(root_url)

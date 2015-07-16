@@ -1,7 +1,7 @@
 <h1>Guest List </h1>
 <% provide(:title, 'Guest List') %>
 <h1>Listing All Guests </h1>
-
+<!-- 
 <ul class="guests">
   <% @guests.each do |guest| %>
     <li>
@@ -11,5 +11,24 @@
     </li>
   <% end %>
 </ul>
+ -->
 
-
+<table>                         
+  <tr>                          
+    <th>Name</th>
+    <th>Email-id</th>
+    <th>Contact Number</th>
+    <th>Send Invite</th>
+  <!--   <th>RSVP Status</th> -->
+  </tr>
+<% @guests.each_with_index do |guest ,i| %> 
+  <tr>
+    <td><%= guest.name %></td>  
+    <td><%= guest.email_id %></td>
+    <td><%= guest.phone_no %></td>
+    <td><input type='checkbox' id='chkbox1' name=<%="guest#{i}" %>></td> 
+    <td><%= link_to 'Edit', edit_event_guest_path(@event, guest) %> ,<%= link_to 'Destroy', event_guest_path(@event, guest), method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+  </tr>
+<% end %>                   
+</table>      
+             
