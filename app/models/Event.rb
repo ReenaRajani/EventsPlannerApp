@@ -20,4 +20,7 @@ class Event < ActiveRecord::Base
 
   validates_associated :users
 
+  def notify_guests
+   SendInviteJob.perform_later(self)
+  end
 end

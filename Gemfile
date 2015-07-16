@@ -35,6 +35,8 @@ gem 'faker'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'will_paginate', '~> 3.0.7'
 gem 'bootstrap-will_paginate', '~>0.0.10'
+gem 'mandrill-api'
+gem 'letter_opener', group: :development
 
 group :development do
   gem 'pry-rails'
