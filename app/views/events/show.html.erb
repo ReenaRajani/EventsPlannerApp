@@ -20,3 +20,5 @@ Invitation
 <hr>
 
 <%= link_to 'Back', events_path %>
+<%= link_to 'AddGuest', new_event_guest_path(@event.id) %>
+<%= link_to 'GuestList', event_guests_path(@event) %>

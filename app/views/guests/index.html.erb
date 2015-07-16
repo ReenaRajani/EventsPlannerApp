@@ -1,2 +1,15 @@
-<h1>Guests#index</h1>
-<p>Find me in app/views/guests/index.html.erb</p>
+<h1>Guest List </h1>
+<% provide(:title, 'Guest List') %>
+<h1>Listing All Guests </h1>
+
+<ul class="guests">
+  <% @guests.each do |guest| %>
+    <li>
+      <%= link_to guest.name, event_guest_path(@event, guest) %>
+      <%= link_to 'Edit', edit_event_guest_path(@event, guest) %></td>
+      <%= link_to 'Destroy', event_guest_path(@event, guest), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </li>
+  <% end %>
+</ul>
+
+

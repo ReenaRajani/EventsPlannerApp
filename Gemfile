@@ -36,6 +36,16 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem 'will_paginate', '~> 3.0.7'
 gem 'bootstrap-will_paginate', '~>0.0.10'
 
+group :development do
+  gem 'pry-rails'
+  gem 'pry-stack_explorer'
+  gem 'annotate'
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+end
+
 gem 'rename'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
