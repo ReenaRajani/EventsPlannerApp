@@ -23,6 +23,7 @@ class EventsController < ApplicationController
   end
 
   def rsvp
+    event = Event.find (params[:event_id])
     
   end
 

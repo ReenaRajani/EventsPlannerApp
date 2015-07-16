@@ -1,22 +1,21 @@
  // A mixin allows a group of CSS rules to be packaged up and used for multiple elements,
 
-// @import "bootstrap-sprockets";
-// @import "bootstrap";
+@import 'bootstrap';
 
-// @mixins box_sizing {
-//   -moz-box-sizing:border-box;
-//   -webkit-box-sizing:border-box;
-//   box-sizing:border-box;
-// }
+$gray-medium-light: #eaeaea;
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 
-// .debug_dump {
-//   clear :both;
-//   // float :left;
-//   width:100%;
-//   margin-top: 45px;
-//   @include box_sizing;
-// }
+.debug_dump {
+  clear :both;
+  width:100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
 
 #error_explanation {
   color: red;
@@ -29,10 +28,14 @@
 // .field_with_errors {
 //   @extend .has-error;
 //   .form-control {
-//     color: $state-danger-text;
+//     color: red;
 //   }
 // }
+*{
+  font-size: 20px;
+  font-family: 'Amiri', serif;
 
+}
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
@@ -45,4 +48,47 @@
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+
+
+.btn-primary {
+  background-color: #7529A9;
+  border-color: #4D2D86;
+}
+
+.navbar-brand {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 35px;
+
+}
+
+.container > .navbar-header {
+  height: 50px;
+
+}
+
+#page-content-wrapper {
+  padding-top: 80px;
+}
+
+h1 {
+  font-family: 'Kaushan Script', cursive;
+}
+
+h3 {
+  font-family: 'Satisfy', cursive;
+}
+
+body{
+  padding-top: 70px;
+  font-size: 20px;
+}
+body p {
+  font-size: 20px;
+  font-family: 'Amiri', serif;
+}
+.event-details {
+  color:#33AD33;
+  text-align: center;
 }

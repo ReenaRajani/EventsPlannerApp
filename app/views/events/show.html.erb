@@ -1,5 +1,7 @@
 <h1> Event details as follow </h1>
-<p>
+<div class="event-details">
+
+  <p>
   Event is  <%= @event.eventName %>
 </p>
 
@@ -13,11 +15,16 @@
 <p>
   Where <%= @event.address %>
 </p>
+<p>
+  Invitation  
+<hr>
+<p> <%= @event.invitation %> </p>
+<hr>
 
-Invitation  
-<hr>
-<%= @event.invitation %>
-<hr>
+</p>
+  
+</div>
+
 
 <%= link_to 'Back', events_path %>
 <%= link_to 'AddGuest', new_event_guest_path(@event.id) %>
