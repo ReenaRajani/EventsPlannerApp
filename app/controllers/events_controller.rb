@@ -8,6 +8,24 @@ class EventsController < ApplicationController
     @events = current_user.events
   end
 
+  def mail
+    event = Event.find( params[:event_id] )
+    details = JSON.parse params[:details]
+    url = request.env["HTTP_ORIGIN"]
+
+    details.each do |user|
+      guest = Guest.find_by :email_id => "hello@hello.com"
+      UserMailer.invite_guest( guest, event, current_user, url ).deliver_now
+      binding.pry
+    end
+
+    render :json => { status: "200 OK" }
+  end
+
+  def rsvp
+    
+  end
+
   def create
     @event = Event.new(event_params)
     if @event.save

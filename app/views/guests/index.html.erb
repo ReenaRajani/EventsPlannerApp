@@ -26,12 +26,12 @@
     <td><%= guest.name %></td>  
     <td><%= guest.email_id %></td>
     <td><%= guest.phone_no %></td>
-    <td><input type='checkbox' id='chkbox1' name=<%="guest#{i}" %>></td> 
+    <td><input type='checkbox' id='chkbox1' name=<%="guest#{i}" %> data-name="<%= guest.name %>" data-email="<%= guest.email_id %>"></td> 
     <td><%= link_to 'Edit', edit_event_guest_path(@event, guest) %> ,<%= link_to 'Destroy', event_guest_path(@event, guest), method: :delete, data: { confirm: 'Are you sure?' } %> </td>
   </tr>
 <% end %>                   
-</table>    
-<form >
-<input type="submit" class= "send_invite" value="Send Invite" /> 
+</table>
+<form class="send_invites">
+<input type="submit" class= "send_invite" value="Send Invites" /> 
 </form>  
              

@@ -1,0 +1,15 @@
+Hi <%= @guest.name %>,
+
+You are invited to <%= @event.eventName %>.
+
+at <%= @event.address %>
+
+<%= @event.invitation %>
+
+<%= @event.eventdate_time.strftime( "It's on %A, %B %d, %Y, at %I:%M%p " ) %>
+
+Click here to RSVP!
+
+Best,
+
+<%= @current_user.name %>

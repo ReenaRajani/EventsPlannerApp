@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invitation</title>
+</head>
+<body>
+
+
+  <p>Hi <%= @guest.name %>,</p>
+    
+  <p>You are invited to <%= @event.eventName %>.</p>
+
+  <p> at <%= @event.address %> </p>
+
+  <p><em><%= @event.invitation %></em></p>
+
+  <p><%= @event.eventdate_time.strftime( "It is on %A, %B %d, %Y, at %I:%M%p " ) %></p> 
+
+  <%= link_to "Click here to RSVP!", @url + event_guest_rsvp_path(@event, @guest) %>
+    
+  <p>Best,</p>
+
+  <p><%= @current_user.name %></p>
+
+  
+</body>
+</html>

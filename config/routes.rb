@@ -47,10 +47,12 @@ Rails.application.routes.draw do
   # resources :events do
   
   resources :events do
+    post 'guests/mail', :to => "events#mail"
     resources :guests do
-        post '/yes' => 'guests#accept'
-        post '/maybe' => 'guests#maybe'
-        post '/no' => 'guests#decline'
+      get '/rsvp' => 'guests#rsvp'
+      post '/yes' => 'guests#accept'
+      post '/maybe' => 'guests#maybe'
+      post '/no' => 'guests#decline'
     end
   end
 end
