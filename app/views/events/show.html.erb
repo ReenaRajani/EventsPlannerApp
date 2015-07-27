@@ -9,7 +9,7 @@
   Occassion of the event is   <%= @event.occasion %>
 </p>
 <p>
-  When  <%= @event.eventdate_time %>
+  When  <%= @event.eventdate_time.strftime( " %A, %B %d, %Y, at %I:%M%p " ) %>
 </p>
 
 <p>

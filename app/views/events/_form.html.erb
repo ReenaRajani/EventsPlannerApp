@@ -24,7 +24,8 @@
 <!--       datetime_select -->
       <div class="form-group">
         <%= f.label :eventdatetime %>
-        <%= f.text_field :eventdate_time, class: 'form-control ', ampm: true , :minute_step => 15 , :start_year => 2015, :order => [:day, :month, :year], :class => 'datepicker' %>
+        <%= f.text_field :eventdate_time, :class => 'datepicker' %>
+       <!--  <%= f.datetime_select :eventdate_time, class: 'form-control', ampm: true , :minute_step => 15 , :start_year => 2015, :order => [:day, :month, :year], :class => 'datepicker' %> -->
       </div>
       <div class="form-group">
         <%= f.label :address %><br>

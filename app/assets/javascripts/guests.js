@@ -1,6 +1,22 @@
 $(document).ready(function(){
     
-    $('.datepicker').datepicker();
+
+    //Drop down date and time picker
+
+    $(function(){
+      $('.datepicker').datepicker({
+        dateFormat: 'dd-mm-yy',
+        onSelect: function(datetext){
+        var d = new Date(); // for now
+        datetext= datetext+" "+d.getHours()+": "+d.getMinutes()+": "+d.getSeconds();
+        $('.datepicker').val(datetext);
+    }
+      });
+
+    });
+
+    
+
     // $('.datepicker').datepicker({dateFormat: 'yy-mm-dd'});
 
    $(".dropdown-toggle").dropdown(); // to display the drop down menu in the pages
