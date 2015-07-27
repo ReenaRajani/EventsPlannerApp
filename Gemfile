@@ -38,6 +38,8 @@ gem 'bootstrap-will_paginate', '~>0.0.10'
 gem 'mandrill-api'
 gem 'letter_opener', group: :development
 
+gem 'jquery-ui-rails'
+
 group :development do
   gem 'pry-rails'
   gem 'pry-stack_explorer'

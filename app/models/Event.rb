@@ -19,5 +19,6 @@ class Event < ActiveRecord::Base
   validates :eventName, :eventdate_time, :address, :invitation,  presence: true
 
   validates_associated :users
+  # validates_format_of :eventdate_time, :with => /\d{1,2}:\d{2}/
 
 end
