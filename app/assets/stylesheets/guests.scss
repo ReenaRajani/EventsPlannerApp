@@ -49,7 +49,22 @@ label {
   font-size: 16px;
 }
 
+.form-group .form-control {
+  height:3.25rem;
+}
 
+input[type="checkbox"], input[type="radio"] {
+  font-size: x-large;
+}
+
+input[type="submit"]{
+  background-color: #9d9d9d;
+  border-color: #908C7B;
+}
+
+input[type="submit"]:hover{
+  background-color: #463333;
+}
 .stacked {
   width: 100%;
   margin: 2% 5%;

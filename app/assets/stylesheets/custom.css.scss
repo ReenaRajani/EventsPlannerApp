@@ -1,5 +1,5 @@
  // A mixin allows a group of CSS rules to be packaged up and used for multiple elements,
-
+@import "bootstrap-sprockets";
 @import 'bootstrap';
 
 $gray-medium-light: #eaeaea;
@@ -23,7 +23,7 @@ $navbar-grey:#9d9d9d;
   color: red;
   ul {
     color: red;
-    // margin: 0 0 30px 0;
+    margin: 0 0 30px 0;
   }
 }
 
@@ -31,14 +31,11 @@ $navbar-grey:#9d9d9d;
   font-size: 1.5em;
   // font-family: 'Amiri', serif;
   @include box_sizing;
+  color:#98968C;
 }
-// input {
-//   height: 3.5rem;
-// }
-// .form-control {
-//   font-size: 17px;
-// }
-
+p > a {
+  color: #9d9d9d;
+}
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
@@ -52,7 +49,6 @@ $navbar-grey:#9d9d9d;
   width: auto;
   margin-left: 0;
 }
-
 
 
 .btn-primary {
@@ -72,16 +68,14 @@ $navbar-grey:#9d9d9d;
 }
 
 .nav > li >  a {
-
     color: $navbar-grey;
-
 }
 
 #page-content-wrapper {
   padding-top: 80px;
 }
 
-h1 {
+h1{
   font-family: 'Kaushan Script', cursive;
 }
 
@@ -91,7 +85,8 @@ h3 {
 
 body{
   padding-top: 100px;
-  background-image: url("http://www.pics4world.com/vb/imgcache/2/21206showing.jpeg");
+  background: url("http://3.bp.blogspot.com/-S7h2TD44CG4/UiAb5x-OAOI/AAAAAAAAKTE/6Ftep507ncA/s1600/Background-Wedding4.jpg");
+
 
 }
 body p {
@@ -99,6 +94,7 @@ body p {
   font-family: 'Amiri', serif;
 
 }
+
 .event-details {
   color:#33AD33;
   text-align: center;
@@ -126,5 +122,18 @@ body p {
   padding-bottom: 10px;
   font-size: 30px;
   font-family: 'Amiri', serif;
+}
+
+.form-signin-heading{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3em;
+  color: #9d9d9d;
+  padding:10px;
+  margin:10px;
+  text-align: center;
+}
+
+.remember-me{
+  font-size: 1.5em;
 }
 
