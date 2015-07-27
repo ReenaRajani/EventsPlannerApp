@@ -1,5 +1,8 @@
 $(document).ready(function(){
-  
+    
+    $('.datepicker').datepicker();
+    // $('.datepicker').datepicker({dateFormat: 'yy-mm-dd'});
+
    $(".dropdown-toggle").dropdown(); // to display the drop down menu in the pages
   var toCopyHTML = $('div.to_copy').html();
   $('body').on("click",'p.add_new_guest', function(e){
