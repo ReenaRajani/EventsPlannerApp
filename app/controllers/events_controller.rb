@@ -12,11 +12,13 @@ class EventsController < ApplicationController
     event = Event.find( params[:event_id] )
     details = JSON.parse params[:details]
     url = request.env["HTTP_ORIGIN"]
-
     details.each do |user|
-      guest = Guest.find_by :email_id => "hello@hello.com"
+
+      guest = Guest.find_by :email_id => details[0]["email"]
+      # binding.pry
+
       UserMailer.invite_guest( guest, event, current_user, url ).deliver_now
-      binding.pry
+      # binding.pry
     end
 
     render :json => { status: "200 OK" }

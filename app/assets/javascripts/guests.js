@@ -1,8 +1,6 @@
 $(document).ready(function(){
-    
 
     //Drop down date and time picker
-
     $(function(){
       $('.datepicker').datepicker({
         dateFormat: 'dd-mm-yy',
@@ -16,18 +14,20 @@ $(document).ready(function(){
     });
 
    $(".dropdown-toggle").dropdown(); // to display the drop down menu in the pages
+
+   // Adding group of guests when the + is clicked 
+
   var toCopyHTML = $('div.to_copy').html();
-  $('body').on("click",'p.add_new_guest', function(e){
+  $('.page-contents').on("click",'p.add_new_guest', function(e){
 
     var toAppend = $('<div>').addClass('to_copy').html(toCopyHTML);
     $('.to_copy:last').after(toAppend);
 
   });
 
+  // send invites mail 
   $('.send_invites'). on('submit', function(event) {
     event.preventDefault();
-    // debugger;
-
     var details = [];
     $("input[type=checkbox]:checked").each( function (i, input) { 
       var data = {};
@@ -50,7 +50,6 @@ $(document).ready(function(){
         console.log( data );
       }
     })
-
 
   });
 

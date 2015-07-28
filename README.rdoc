@@ -42,33 +42,33 @@ jquery-ui - For the DateTime
 
 
 ==User Guide :
----------------
+
 To use this, create an account at  https://planeasy.herokuapp.com/ and login
 The homepage is a dashboard where the users can create an event and can add guests and send invites to them 
 
 ==Testing :
------------
+
 Not Yet completed. 
 
 
 ==Related Resources
---------------------
+
   *rename - #http://www.adamscott.io/blog/2014/01/21/renaming-a-ruby-on-rails-application/
   *testing - #http://www.webascender.com/Blog/ID/566/Testing-Rails-4-Apps-With-RSpec-3-Part-I#.VaN8NM4kPdt
 
 
 ==How to Run the Test Suite :
-------------------------------
+
   Rspec has been used but is not completed. In order to run the test suite, go to the project folder and run rspec. 
 
 
 ==Deployment instructions :
----------------------------
+
   The project has been deployed on Heroku.
 
 
 ==Future Considerations :
--------------------------
+
   *Design Updates
   *Addition of Geolocation 
   *Addition of Event planner tracker 
