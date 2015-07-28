@@ -12,7 +12,7 @@
 <body>
 
 
-  <!-- Display tree -->
+    <!-- Display tree -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="margin-bottom: 0">
   <div class="container">
     <div class="navbar-header">
@@ -72,8 +72,9 @@
     <% flash.each do |message_type , message|  %>
       <div class="alert-<%= message_type %> "> <%= message %></div>
       <% end %>
-  </div>
-  
+  </div> 
+      <!-- End of Display tree -->
+
       <%= yield %>
 </body>
 </html>
