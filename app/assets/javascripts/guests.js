@@ -1,6 +1,7 @@
-$(document).ready(function(){
+$(document).on('ready page:load',function(){
 
-    //Drop down date and time picker
+    console.log("document is ready");
+      //Drop down date and time picker
     $(function(){
       $('.datepicker').datepicker({
         dateFormat: 'dd-mm-yy',
